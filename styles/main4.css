@@ -1,0 +1,327 @@
+:root{
+    --spacing: 2rem; 
+    --MaxWH: 50rem;
+}
+
+p,
+h1,
+h2,
+ul,
+article{
+
+    margin: 0;
+    padding: 0;
+    margin-bottom: var(--spacing);
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+html{
+    display: flex;
+    justify-content: center;
+    
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: linear-gradient(90deg, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 36%, rgb(0, 0, 0) 62%, rgb(255, 255, 255) 82%, rgb(255, 255, 255) 100%);
+    background-size: 100%;
+    max-width: var(--MaxWH);
+    max-height: var(--MaxWH);
+    
+}
+
+#TitleDiv{
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(43deg, rgb(255, 255, 255) 0%, rgb(0, 0, 0) 36%, rgb(255, 255, 255) 62%, rgb(0, 0, 0) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300%;
+    animation: weirdWorks 9s ease-in-out infinite;
+    -moz-animation: weirdWorks 9s ease-in-out infinite;
+    -webkit-animation: weirdWorks 9s ease-in-out infinite;
+}
+
+#headShot{
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing);
+    animation: headFloat 9s ease-in-out infinite;
+}
+
+@keyframes headFloat {
+    0% { bottom: var(--spacing); }
+    50% { bottom: 4rem; }
+    100% { bottom: var(--spacing);; }
+}
+
+
+
+
+
+
+
+
+
+
+#headShot > img{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 15rem;
+    border: 2px solid #0000;
+    background: linear-gradient(#000000, #210530) padding-box, linear-gradient(
+      var(--angle),
+      rgb(140, 0, 255),
+      rgb(0, 0, 0),
+      rgb(255, 10, 214)
+    ) border-box;
+    animation: 5s rotate linear infinite;
+}
+
+
+#introP2 > article > p{
+    margin-bottom: 0 ;
+}
+#introP2 > article{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: var(--spacing);
+    border: 2px solid #0000;
+    border-radius: 1rem;
+    background: linear-gradient(#7d7d7d, #000000) padding-box, linear-gradient(
+      var(--angle),
+      rgb(160, 112, 200),
+      rgb(0, 0, 0),
+      rgb(197, 79, 177)
+    ) border-box;
+    animation: 5s rotate linear infinite;
+}
+
+#Creator{
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    font-style: italic;
+    font-weight: 600;
+    padding-bottom: var(--spacing)
+}
+
+.twitter{
+    text-decoration: none;
+    color: rgb(190, 190, 190);
+}
+.twitter:hover{
+    color: rgb(195, 0, 255);
+}
+
+#mainPage{
+    background-color: rgb(255, 255, 255);
+    color:aliceblue ;
+    padding-left: 1.50rem;
+    padding-right: 1.50rem;
+    padding-top: 3rem;
+    border-radius: 0.50rem;
+    border: 2px solid #0000;
+    border-radius: 10px;
+    background: linear-gradient(#ffffff, #210530) padding-box, linear-gradient(
+      var(--angle),
+      rgb(114, 178, 135),
+      rgb(0, 0, 0),
+      rgb(129, 183, 199)
+    ) border-box;
+    animation: 5s rotate linear infinite;
+}
+
+
+
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+#Facts1{
+    font-size: xx-large;
+    font-style: italic;
+    background-image: linear-gradient(43deg, rgb(0, 255, 0) 0%, rgb(0, 225, 255) 36%, rgb(212, 0, 255) 62%, rgb(255, 0, 191) 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 300%;
+    animation: weirdWorks 9s ease-in-out infinite;
+    -moz-animation: weirdWorks 9s ease-in-out infinite;
+    -webkit-animation: weirdWorks 9s ease-in-out infinite;
+}
+
+/* The animation */
+@keyframes weirdWorks {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+@keyframes rotate {
+to {
+  --angle: 360deg;
+}
+}
+@property --angle {
+syntax: "<angle>";
+initial-value: 0deg;
+inherits: false;
+}
+
+#secondPage{
+    display: flex;
+    justify-content: right;
+    background-color: aliceblue;
+    width: 20rem;
+    height: 20rem;
+}
+
+
+
+
+/* side bar */
+/* ---------------------------------------------------------- */
+#menu {
+    position: absolute;
+    left: 0rem;
+    top: 0rem;
+
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    
+}
+
+button{
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    appearance: none;
+    border: none;
+    background: transparent;
+}
+
+
+#menu > button > img{
+    position: absolute;
+    left: calc(50% - 1.50rem);
+    bottom: calc(50% - 2.50rem);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 4rem;
+    border: 2px solid #1100ff;
+    transition: border 0.3s ease-in-out;
+}
+
+#menu > button > img:hover{
+    border: 2px solid #ff00ff;
+}
+
+
+#menu.active {
+    animation-name: menuExpand;
+    animation-duration: 1.50s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#menu button {
+  
+}
+
+/* submenu */
+
+.submenu {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    right: 5;
+    width: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+.menuItems{
+    font-size: x-large;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-style: oblique;
+    padding-left: var(--spacing);
+}
+.menuItems:hover{
+    color: #ff00dd;
+}
+
+
+.submenu li {
+    white-space: nowrap;
+
+}
+
+#menu.active .submenu {
+    animation-name: submenuAppear;
+    animation-duration: 1.50s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes menuExpand {
+    0% {
+        width: 3rem;
+        height: 3rem;
+        background-color: rgb(0, 0, 0);
+    }
+
+    100% {
+        width: 20rem;
+        height: 50rem;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
+@keyframes submenuAppear {
+    0% {
+        width: 0;
+    }
+    33% {
+        width: 0;
+    }
+    66% {
+        width: 0;
+        height: 30rem;
+    }
+    100% {
+        width: 80%;
+        height: 30rem;
+    }
+}
+
+/* ---------------------------------------------------- */
+
+@media only screen and (max-width: 700px) {
+    :root{
+        --spacing: 1rem; 
+        --MaxWH: 30rem;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    :root{
+        --spacing: 3rem; 
+        --MaxWH: 60rem;
+    }
+
+
+} 
